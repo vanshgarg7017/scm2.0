@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body>
+    <h1>this is About page</h1>
+    <hr>
+    <!-- <div th:insert="~{base::parent(~{::#third_content})}"></div>
+    <section id="main_content">
+        <p>my name is vansh garg</p>
+    </section>
+    <section id="second_content">
+        <p>my name is papa</p>
+    </section>
+    <section id="third_content">
+        <p>my name is vanshpapa</p>
+    </section> -->
+    <div  class="host-tag" th:replace="${isLogin}? ~{base::parent(~{::section})} : ~{base :: test(~{::#not_logged_in})}">
+        <section>
+            <h1>Dynamic content</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Ipsam iste tenetur tempore ratione minima, optio sit asperiores sed fugiat, voluptatibus praesentium. Laboriosam eius eos possimus esse modi qui, ad repudiandae!
+            </p>
+            <button>click here</button>
+        </section>
+        <section id="not_logged_in">
+            <h1>User is not logged in</h1>
+        </section>
+    </div>
+
+</body>
+</html>

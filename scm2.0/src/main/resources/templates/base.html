@@ -1,0 +1,13 @@
+<div class="parent_fragment"   th:fragment="parent(content)">
+    <h1>This is parent fragment</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Rerum, dolorum. Distinctio alias saepe excepturi, voluptates rem eligendi laboriosam iusto incidunt optio odio ipsam nisi illum amet officiis magnam fugit quidem.
+    </p>
+    <div th:replace="${content}"></div>
+
+</div>
+
+<div th:fragment="test(content)">
+    <h1>this is the testing fragment</h1>
+    <div th:replace="${content}"></div>
+</div>
